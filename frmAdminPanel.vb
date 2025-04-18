@@ -108,7 +108,10 @@ Public Class frmAdminPanel
             Return
         End If
 
-        Dim username = lstUsers.SelectedItem.ToString()
+        ' ✅ Extract just the username part
+        Dim selectedEntry As String = lstUsers.SelectedItem.ToString()
+        Dim username As String = selectedEntry.Split(" "c)(0)
+
         Try
             Using conn As New SQLiteConnection($"Data Source={DB_PATH};Version=3;")
                 conn.Open()
@@ -125,6 +128,7 @@ Public Class frmAdminPanel
             txtLogs.AppendText("❌ Error updating block status: " & ex.Message & Environment.NewLine)
         End Try
     End Sub
+
 
     Private Sub timerRefreshUsers_Tick(sender As Object, e As EventArgs) Handles timerRefreshUsers.Tick
         LoadUsers()
