@@ -1,5 +1,6 @@
 ﻿Imports System.Data.SQLite
 Imports System.Diagnostics.Eventing
+Imports System.Drawing.Drawing2D
 Imports System.IO
 Imports System.Net.Sockets
 
@@ -11,6 +12,11 @@ Public Class frmAdminPanel
     Private Sub frmAdminPanel_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         LoadUsers()
         SetUserStatus(LoggedInUsername, "Online")
+        ApplyFormRadius(30) ' Adjust 30 to your desired corner radius
+        RoundButton(btnRefresh, 35, Color.White, 2)
+        RoundButton(btnBlock, 35, Color.White, 2)
+        RoundButton(btnUnblock, 35, Color.White, 2)
+        RoundButton(btnLogout, 35, Color.White, 2)
     End Sub
 
     Private Sub frmAdminPanel_FormClosing(sender As Object, e As FormClosingEventArgs) Handles MyBase.FormClosing
@@ -159,5 +165,47 @@ Public Class frmAdminPanel
             Me.Close()
         End If
     End Sub
+    Private Sub RoundButton(btn As Button, radius As Integer, borderColor As Color, borderSize As Integer)
+        ' Set rounded region
+        Dim path As New Drawing2D.GraphicsPath()
+        path.AddArc(0, 0, radius, radius, 180, 90)
+        path.AddArc(btn.Width - radius, 0, radius, radius, 270, 90)
+        path.AddArc(btn.Width - radius, btn.Height - radius, radius, radius, 0, 90)
+        path.AddArc(0, btn.Height - radius, radius, radius, 90, 90)
+        path.CloseFigure()
+        btn.Region = New Region(path)
+
+        ' Draw border manually
+        AddHandler btn.Paint, Sub(s, e)
+                                  e.Graphics.SmoothingMode = Drawing2D.SmoothingMode.AntiAlias
+                                  Using pen As New Pen(borderColor, borderSize)
+                                      pen.Alignment = Drawing2D.PenAlignment.Inset
+                                      e.Graphics.DrawPath(pen, path)
+                                  End Using
+                              End Sub
+    End Sub
+
+    Private Sub ApplyFormRadius(radius As Integer)
+        Dim path As New GraphicsPath()
+        path.StartFigure()
+        path.AddArc(New Rectangle(0, 0, radius, radius), 180, 90)
+        path.AddArc(New Rectangle(Me.Width - radius, 0, radius, radius), 270, 90)
+        path.AddArc(New Rectangle(Me.Width - radius, Me.Height - radius, radius, radius), 0, 90)
+        path.AddArc(New Rectangle(0, Me.Height - radius, radius, radius), 90, 90)
+        path.CloseFigure()
+        Me.Region = New Region(path)
+    End Sub
+
+    Private Sub btnMinimize_Click(sender As Object, e As EventArgs) Handles btnMinimize.Click
+        WindowState = FormWindowState.Minimized
+    End Sub
+    Private Sub btnExit_Click(sender As Object, e As EventArgs) Handles btnExit.Click
+        Dim result As DialogResult = MessageBox.Show("Are you sure you want to exit?", "Confirm Exit", MessageBoxButtons.YesNo, MessageBoxIcon.Question)
+
+        If result = DialogResult.Yes Then
+            Application.Exit()
+        End If
+    End Sub
+
 
 End Class

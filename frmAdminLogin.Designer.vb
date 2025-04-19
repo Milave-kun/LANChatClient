@@ -22,113 +22,129 @@ Partial Class frmAdminLogin
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Label2 = New Label()
-        Label1 = New Label()
         btnToUserLogin = New Button()
         btnLogin = New Button()
         txtPassword = New TextBox()
         txtUsername = New TextBox()
         lblTitle = New Label()
         PictureBox1 = New PictureBox()
+        btnMinimize = New FontAwesome.Sharp.IconButton()
+        btnExit = New FontAwesome.Sharp.IconButton()
         CType(PictureBox1, ComponentModel.ISupportInitialize).BeginInit()
         SuspendLayout()
         ' 
-        ' Label2
-        ' 
-        Label2.AutoSize = True
-        Label2.Font = New Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        Label2.Location = New Point(50, 226)
-        Label2.Name = "Label2"
-        Label2.Size = New Size(91, 25)
-        Label2.TabIndex = 14
-        Label2.Text = "Password"
-        ' 
-        ' Label1
-        ' 
-        Label1.AutoSize = True
-        Label1.Font = New Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        Label1.Location = New Point(50, 156)
-        Label1.Name = "Label1"
-        Label1.Size = New Size(97, 25)
-        Label1.TabIndex = 13
-        Label1.Text = "Username"
-        ' 
         ' btnToUserLogin
         ' 
+        btnToUserLogin.FlatAppearance.BorderSize = 0
         btnToUserLogin.FlatStyle = FlatStyle.Flat
-        btnToUserLogin.Location = New Point(201, 312)
+        btnToUserLogin.Location = New Point(669, 405)
         btnToUserLogin.Name = "btnToUserLogin"
-        btnToUserLogin.Size = New Size(139, 38)
+        btnToUserLogin.Size = New Size(119, 33)
         btnToUserLogin.TabIndex = 12
         btnToUserLogin.Text = "Back to User Login"
         btnToUserLogin.UseVisualStyleBackColor = True
         ' 
         ' btnLogin
         ' 
+        btnLogin.FlatAppearance.BorderSize = 0
         btnLogin.FlatStyle = FlatStyle.Flat
-        btnLogin.Location = New Point(50, 312)
+        btnLogin.Location = New Point(59, 310)
         btnLogin.Name = "btnLogin"
-        btnLogin.Size = New Size(141, 38)
+        btnLogin.Size = New Size(290, 38)
         btnLogin.TabIndex = 11
         btnLogin.Text = "Login"
         btnLogin.UseVisualStyleBackColor = True
         ' 
         ' txtPassword
         ' 
-        txtPassword.BorderStyle = BorderStyle.FixedSingle
+        txtPassword.BackColor = Color.FromArgb(CByte(32), CByte(34), CByte(37))
+        txtPassword.BorderStyle = BorderStyle.None
         txtPassword.Font = New Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        txtPassword.Location = New Point(50, 254)
+        txtPassword.ForeColor = Color.White
+        txtPassword.Location = New Point(59, 252)
         txtPassword.Name = "txtPassword"
-        txtPassword.Size = New Size(290, 29)
+        txtPassword.PlaceholderText = "Password"
+        txtPassword.Size = New Size(290, 22)
         txtPassword.TabIndex = 10
         txtPassword.UseSystemPasswordChar = True
         ' 
         ' txtUsername
         ' 
-        txtUsername.BorderStyle = BorderStyle.FixedSingle
+        txtUsername.BackColor = Color.FromArgb(CByte(32), CByte(34), CByte(37))
+        txtUsername.BorderStyle = BorderStyle.None
         txtUsername.Font = New Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        txtUsername.Location = New Point(50, 184)
+        txtUsername.ForeColor = Color.White
+        txtUsername.Location = New Point(59, 182)
         txtUsername.Name = "txtUsername"
-        txtUsername.Size = New Size(290, 29)
+        txtUsername.PlaceholderText = "Username"
+        txtUsername.Size = New Size(290, 22)
         txtUsername.TabIndex = 9
         ' 
         ' lblTitle
         ' 
         lblTitle.AutoSize = True
         lblTitle.Font = New Font("Segoe UI", 27.75F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        lblTitle.Location = New Point(127, 71)
+        lblTitle.Location = New Point(92, 83)
         lblTitle.Name = "lblTitle"
-        lblTitle.Size = New Size(138, 50)
+        lblTitle.Size = New Size(246, 50)
         lblTitle.TabIndex = 8
-        lblTitle.Text = "Admin"
+        lblTitle.Text = "Admin Login"
         ' 
         ' PictureBox1
         ' 
         PictureBox1.BackColor = Color.Transparent
-        PictureBox1.Image = My.Resources.Resources.LanChatLogo1
-        PictureBox1.Location = New Point(436, 81)
+        PictureBox1.Image = My.Resources.Resources.LogoKoTOoooo
+        PictureBox1.Location = New Point(452, 101)
         PictureBox1.Name = "PictureBox1"
         PictureBox1.Size = New Size(266, 247)
         PictureBox1.SizeMode = PictureBoxSizeMode.StretchImage
         PictureBox1.TabIndex = 15
         PictureBox1.TabStop = False
         ' 
+        ' btnMinimize
+        ' 
+        btnMinimize.FlatAppearance.BorderSize = 0
+        btnMinimize.FlatStyle = FlatStyle.Flat
+        btnMinimize.IconChar = FontAwesome.Sharp.IconChar.Subtract
+        btnMinimize.IconColor = Color.White
+        btnMinimize.IconFont = FontAwesome.Sharp.IconFont.Auto
+        btnMinimize.IconSize = 38
+        btnMinimize.Location = New Point(702, 12)
+        btnMinimize.Name = "btnMinimize"
+        btnMinimize.Size = New Size(40, 40)
+        btnMinimize.TabIndex = 23
+        btnMinimize.UseVisualStyleBackColor = True
+        ' 
+        ' btnExit
+        ' 
+        btnExit.FlatAppearance.BorderSize = 0
+        btnExit.FlatStyle = FlatStyle.Flat
+        btnExit.IconChar = FontAwesome.Sharp.IconChar.Close
+        btnExit.IconColor = Color.White
+        btnExit.IconFont = FontAwesome.Sharp.IconFont.Auto
+        btnExit.IconSize = 38
+        btnExit.Location = New Point(748, 12)
+        btnExit.Name = "btnExit"
+        btnExit.Size = New Size(40, 40)
+        btnExit.TabIndex = 22
+        btnExit.UseVisualStyleBackColor = True
+        ' 
         ' frmAdminLogin
         ' 
         AutoScaleDimensions = New SizeF(7F, 15F)
         AutoScaleMode = AutoScaleMode.Font
-        BackColor = Color.Black
+        BackColor = Color.FromArgb(CByte(32), CByte(34), CByte(37))
         ClientSize = New Size(800, 450)
+        Controls.Add(btnMinimize)
+        Controls.Add(btnExit)
         Controls.Add(PictureBox1)
-        Controls.Add(Label2)
-        Controls.Add(Label1)
         Controls.Add(btnToUserLogin)
         Controls.Add(btnLogin)
         Controls.Add(txtPassword)
         Controls.Add(txtUsername)
         Controls.Add(lblTitle)
         ForeColor = Color.White
-        FormBorderStyle = FormBorderStyle.FixedToolWindow
+        FormBorderStyle = FormBorderStyle.None
         MaximizeBox = False
         Name = "frmAdminLogin"
         StartPosition = FormStartPosition.CenterScreen
@@ -137,13 +153,12 @@ Partial Class frmAdminLogin
         ResumeLayout(False)
         PerformLayout()
     End Sub
-
-    Friend WithEvents Label2 As Label
-    Friend WithEvents Label1 As Label
     Friend WithEvents btnToUserLogin As Button
     Friend WithEvents btnLogin As Button
     Friend WithEvents txtPassword As TextBox
     Friend WithEvents txtUsername As TextBox
     Friend WithEvents lblTitle As Label
     Friend WithEvents PictureBox1 As PictureBox
+    Friend WithEvents btnMinimize As FontAwesome.Sharp.IconButton
+    Friend WithEvents btnExit As FontAwesome.Sharp.IconButton
 End Class

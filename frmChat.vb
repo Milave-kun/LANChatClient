@@ -2,6 +2,7 @@
 Imports System.IO
 Imports System.Threading
 Imports System.Data.SQLite
+Imports System.Drawing.Drawing2D
 
 Public Class frmChat
     Private client As TcpClient
@@ -15,6 +16,11 @@ Public Class frmChat
     Private DB_PATH As String = Application.StartupPath & "\Database\chatapp.db"
 
     Private Sub frmChat_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        ApplyFormRadius(30) ' Adjust 30 to your desired corner radius
+        RoundButton(btnSendMessage, 35, Color.White, 2)
+        RoundButton(btnChangeAvatar, 35, Color.White, 2)
+        RoundButton(btnLogout, 35, Color.Red, 2)
+
         lblWelcome.Text = $"Welcome, {LoggedInUsername}"
         LoadMyAvatar()
 
@@ -82,28 +88,6 @@ Public Class frmChat
             MessageBox.Show("Error loading your avatar: " & ex.Message)
         End Try
     End Sub
-
-    Private Sub btnSend_Click(sender As Object, e As EventArgs) Handles btnSend.Click
-        If lstUsersOnline.SelectedItem Is Nothing Then
-            MessageBox.Show("Please select a user to send the message to.")
-            Return
-        End If
-
-        Dim msg As String = txtMessage.Text.Trim()
-        If msg = "" Then Return
-
-        Dim selectedUser As String = lstUsersOnline.SelectedItem.ToString()
-        Dim currentTimestamp As String = DateTime.Now.ToString("HH:mm:ss tt")
-
-        ' Send message to server/client
-        writer.WriteLine($"[MSG]|{LoggedInUserID}|{selectedUser}|{currentTimestamp}|{msg}")
-
-        ' Save message to database (this was missing)
-        SaveMessageToDatabase(LoggedInUserID, selectedUser, msg)
-
-        txtMessage.Clear()
-    End Sub
-
 
     Private Sub SaveMessageToDatabase(senderId As Integer, receiverUsername As String, message As String)
         Try
@@ -384,5 +368,65 @@ Public Class frmChat
         End Try
     End Sub
 
+    Private Sub btnSendMessage_Click(sender As Object, e As EventArgs) Handles btnSendMessage.Click
+        If lstUsersOnline.SelectedItem Is Nothing Then
+            MessageBox.Show("Please select a user to send the message to.")
+            Return
+        End If
 
+        Dim msg As String = txtMessage.Text.Trim()
+        If msg = "" Then Return
+
+        Dim selectedUser As String = lstUsersOnline.SelectedItem.ToString()
+        Dim currentTimestamp As String = DateTime.Now.ToString("HH:mm:ss tt")
+
+        ' Send message to server/client
+        writer.WriteLine($"[MSG]|{LoggedInUserID}|{selectedUser}|{currentTimestamp}|{msg}")
+
+        ' Save message to database (this was missing)
+        SaveMessageToDatabase(LoggedInUserID, selectedUser, msg)
+
+        txtMessage.Clear()
+    End Sub
+
+    Private Sub btnMinimize_Click(sender As Object, e As EventArgs) Handles btnMinimize.Click
+        WindowState = FormWindowState.Minimized
+    End Sub
+    Private Sub btnExit_Click(sender As Object, e As EventArgs) Handles btnExit.Click
+        Dim result As DialogResult = MessageBox.Show("Are you sure you want to exit?", "Confirm Exit", MessageBoxButtons.YesNo, MessageBoxIcon.Question)
+
+        If result = DialogResult.Yes Then
+            Application.Exit()
+        End If
+    End Sub
+    Private Sub ApplyFormRadius(radius As Integer)
+        Dim path As New GraphicsPath()
+        path.StartFigure()
+        path.AddArc(New Rectangle(0, 0, radius, radius), 180, 90)
+        path.AddArc(New Rectangle(Me.Width - radius, 0, radius, radius), 270, 90)
+        path.AddArc(New Rectangle(Me.Width - radius, Me.Height - radius, radius, radius), 0, 90)
+        path.AddArc(New Rectangle(0, Me.Height - radius, radius, radius), 90, 90)
+        path.CloseFigure()
+        Me.Region = New Region(path)
+    End Sub
+
+    Private Sub RoundButton(btn As Button, radius As Integer, borderColor As Color, borderSize As Integer)
+        ' Set rounded region
+        Dim path As New Drawing2D.GraphicsPath()
+        path.AddArc(0, 0, radius, radius, 180, 90)
+        path.AddArc(btn.Width - radius, 0, radius, radius, 270, 90)
+        path.AddArc(btn.Width - radius, btn.Height - radius, radius, radius, 0, 90)
+        path.AddArc(0, btn.Height - radius, radius, radius, 90, 90)
+        path.CloseFigure()
+        btn.Region = New Region(path)
+
+        ' Draw border manually
+        AddHandler btn.Paint, Sub(s, e)
+                                  e.Graphics.SmoothingMode = Drawing2D.SmoothingMode.AntiAlias
+                                  Using pen As New Pen(borderColor, borderSize)
+                                      pen.Alignment = Drawing2D.PenAlignment.Inset
+                                      e.Graphics.DrawPath(pen, path)
+                                  End Using
+                              End Sub
+    End Sub
 End Class
