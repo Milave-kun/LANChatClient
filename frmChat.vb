@@ -18,8 +18,8 @@ Public Class frmChat
     Private Sub frmChat_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         ApplyFormRadius(30) ' Adjust 30 to your desired corner radius
         RoundButton(btnSendMessage, 35, Color.White, 2)
-        RoundButton(btnChangeAvatar, 35, Color.White, 2)
-        RoundButton(btnLogout, 35, Color.Red, 2)
+        RoundButton(btnChangeAvatar, 25, Color.White, 2)
+        RoundButton(btnLogout, 25, Color.Red, 2)
 
         lblWelcome.Text = $"Welcome, {LoggedInUsername}"
         LoadMyAvatar()

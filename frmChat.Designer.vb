@@ -54,9 +54,9 @@ Partial Class frmChat
         ' lblWelcome
         ' 
         lblWelcome.AutoSize = True
-        lblWelcome.Font = New Font("Segoe UI", 12.0F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        lblWelcome.Font = New Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         lblWelcome.ForeColor = Color.White
-        lblWelcome.Location = New Point(479, 55)
+        lblWelcome.Location = New Point(47, 7)
         lblWelcome.Name = "lblWelcome"
         lblWelcome.Size = New Size(179, 21)
         lblWelcome.TabIndex = 0
@@ -69,9 +69,9 @@ Partial Class frmChat
         lstUsersOnline.ForeColor = Color.White
         lstUsersOnline.FormattingEnabled = True
         lstUsersOnline.ItemHeight = 15
-        lstUsersOnline.Location = New Point(12, 44)
+        lstUsersOnline.Location = New Point(12, 59)
         lstUsersOnline.Name = "lstUsersOnline"
-        lstUsersOnline.Size = New Size(120, 392)
+        lstUsersOnline.Size = New Size(131, 377)
         lstUsersOnline.TabIndex = 1
         ' 
         ' rtbChatBox
@@ -80,9 +80,9 @@ Partial Class frmChat
         rtbChatBox.BorderStyle = BorderStyle.FixedSingle
         rtbChatBox.Enabled = False
         rtbChatBox.ForeColor = Color.Black
-        rtbChatBox.Location = New Point(149, 245)
+        rtbChatBox.Location = New Point(149, 164)
         rtbChatBox.Name = "rtbChatBox"
-        rtbChatBox.Size = New Size(637, 148)
+        rtbChatBox.Size = New Size(637, 229)
         rtbChatBox.TabIndex = 2
         rtbChatBox.Text = ""
         ' 
@@ -99,18 +99,18 @@ Partial Class frmChat
         ' 
         ' picMyAvatar
         ' 
-        picMyAvatar.Location = New Point(686, 55)
+        picMyAvatar.Location = New Point(527, 5)
         picMyAvatar.Name = "picMyAvatar"
-        picMyAvatar.Size = New Size(100, 100)
+        picMyAvatar.Size = New Size(37, 37)
         picMyAvatar.SizeMode = PictureBoxSizeMode.StretchImage
         picMyAvatar.TabIndex = 5
         picMyAvatar.TabStop = False
         ' 
         ' picSelectedAvatar
         ' 
-        picSelectedAvatar.Location = New Point(149, 82)
+        picSelectedAvatar.Location = New Point(149, 58)
         picSelectedAvatar.Name = "picSelectedAvatar"
-        picSelectedAvatar.Size = New Size(120, 120)
+        picSelectedAvatar.Size = New Size(100, 100)
         picSelectedAvatar.SizeMode = PictureBoxSizeMode.StretchImage
         picSelectedAvatar.TabIndex = 6
         picSelectedAvatar.TabStop = False
@@ -120,11 +120,11 @@ Partial Class frmChat
         btnChangeAvatar.FlatAppearance.BorderSize = 0
         btnChangeAvatar.FlatStyle = FlatStyle.Flat
         btnChangeAvatar.ForeColor = Color.White
-        btnChangeAvatar.Location = New Point(686, 161)
+        btnChangeAvatar.Location = New Point(570, 14)
         btnChangeAvatar.Name = "btnChangeAvatar"
-        btnChangeAvatar.Size = New Size(100, 36)
+        btnChangeAvatar.Size = New Size(60, 25)
         btnChangeAvatar.TabIndex = 7
-        btnChangeAvatar.Text = "Change Avatar"
+        btnChangeAvatar.Text = "Edit"
         btnChangeAvatar.UseVisualStyleBackColor = True
         ' 
         ' btnLogout
@@ -132,9 +132,9 @@ Partial Class frmChat
         btnLogout.FlatAppearance.BorderSize = 0
         btnLogout.FlatStyle = FlatStyle.Flat
         btnLogout.ForeColor = Color.White
-        btnLogout.Location = New Point(686, 203)
+        btnLogout.Location = New Point(636, 14)
         btnLogout.Name = "btnLogout"
-        btnLogout.Size = New Size(100, 36)
+        btnLogout.Size = New Size(60, 25)
         btnLogout.TabIndex = 8
         btnLogout.Text = "Logout"
         btnLogout.UseVisualStyleBackColor = True
@@ -143,7 +143,7 @@ Partial Class frmChat
         ' 
         Label5.AutoSize = True
         Label5.ForeColor = Color.White
-        Label5.Location = New Point(275, 140)
+        Label5.Location = New Point(255, 110)
         Label5.Name = "Label5"
         Label5.Size = New Size(55, 15)
         Label5.TabIndex = 33
@@ -153,7 +153,7 @@ Partial Class frmChat
         ' 
         lblAddress.AutoSize = True
         lblAddress.ForeColor = Color.White
-        lblAddress.Location = New Point(369, 140)
+        lblAddress.Location = New Point(349, 110)
         lblAddress.Name = "lblAddress"
         lblAddress.Size = New Size(0, 15)
         lblAddress.TabIndex = 32
@@ -162,7 +162,7 @@ Partial Class frmChat
         ' 
         Label10.AutoSize = True
         Label10.ForeColor = Color.White
-        Label10.Location = New Point(275, 93)
+        Label10.Location = New Point(255, 63)
         Label10.Name = "Label10"
         Label10.Size = New Size(70, 15)
         Label10.TabIndex = 31
@@ -172,7 +172,7 @@ Partial Class frmChat
         ' 
         lblFirstName.AutoSize = True
         lblFirstName.ForeColor = Color.White
-        lblFirstName.Location = New Point(369, 93)
+        lblFirstName.Location = New Point(349, 63)
         lblFirstName.Name = "lblFirstName"
         lblFirstName.Size = New Size(0, 15)
         lblFirstName.TabIndex = 30
@@ -181,7 +181,7 @@ Partial Class frmChat
         ' 
         Label8.AutoSize = True
         Label8.ForeColor = Color.White
-        Label8.Location = New Point(275, 108)
+        Label8.Location = New Point(255, 78)
         Label8.Name = "Label8"
         Label8.Size = New Size(69, 15)
         Label8.TabIndex = 29
@@ -191,7 +191,7 @@ Partial Class frmChat
         ' 
         lblLastName.AutoSize = True
         lblLastName.ForeColor = Color.White
-        lblLastName.Location = New Point(369, 108)
+        lblLastName.Location = New Point(349, 78)
         lblLastName.Name = "lblLastName"
         lblLastName.Size = New Size(0, 15)
         lblLastName.TabIndex = 28
@@ -200,7 +200,7 @@ Partial Class frmChat
         ' 
         LAbea.AutoSize = True
         LAbea.ForeColor = Color.White
-        LAbea.Location = New Point(275, 125)
+        LAbea.Location = New Point(255, 95)
         LAbea.Name = "LAbea"
         LAbea.Size = New Size(57, 15)
         LAbea.TabIndex = 27
@@ -210,7 +210,7 @@ Partial Class frmChat
         ' 
         lblBirthday.AutoSize = True
         lblBirthday.ForeColor = Color.White
-        lblBirthday.Location = New Point(369, 125)
+        lblBirthday.Location = New Point(349, 95)
         lblBirthday.Name = "lblBirthday"
         lblBirthday.Size = New Size(0, 15)
         lblBirthday.TabIndex = 26
@@ -219,17 +219,17 @@ Partial Class frmChat
         ' 
         Label4.AutoSize = True
         Label4.ForeColor = Color.White
-        Label4.Location = New Point(275, 155)
+        Label4.Location = New Point(255, 125)
         Label4.Name = "Label4"
-        Label4.Size = New Size(94, 15)
+        Label4.Size = New Size(69, 15)
         Label4.TabIndex = 25
-        Label4.Text = "Phone Number :"
+        Label4.Text = "Phone No. :"
         ' 
         ' lblPhoneNumber
         ' 
         lblPhoneNumber.AutoSize = True
         lblPhoneNumber.ForeColor = Color.White
-        lblPhoneNumber.Location = New Point(369, 155)
+        lblPhoneNumber.Location = New Point(349, 125)
         lblPhoneNumber.Name = "lblPhoneNumber"
         lblPhoneNumber.Size = New Size(0, 15)
         lblPhoneNumber.TabIndex = 24
@@ -238,7 +238,7 @@ Partial Class frmChat
         ' 
         Label3.AutoSize = True
         Label3.ForeColor = Color.White
-        Label3.Location = New Point(275, 170)
+        Label3.Location = New Point(255, 140)
         Label3.Name = "Label3"
         Label3.Size = New Size(45, 15)
         Label3.TabIndex = 23
@@ -248,7 +248,7 @@ Partial Class frmChat
         ' 
         lblStatus.AutoSize = True
         lblStatus.ForeColor = Color.White
-        lblStatus.Location = New Point(369, 170)
+        lblStatus.Location = New Point(349, 140)
         lblStatus.Name = "lblStatus"
         lblStatus.Size = New Size(0, 15)
         lblStatus.TabIndex = 22
@@ -285,7 +285,7 @@ Partial Class frmChat
         ' 
         PictureBox1.BackColor = Color.Transparent
         PictureBox1.Image = My.Resources.Resources.LogoKoTOoooo
-        PictureBox1.Location = New Point(12, 12)
+        PictureBox1.Location = New Point(12, 5)
         PictureBox1.Name = "PictureBox1"
         PictureBox1.Size = New Size(29, 29)
         PictureBox1.SizeMode = PictureBoxSizeMode.StretchImage
@@ -309,7 +309,7 @@ Partial Class frmChat
         ' 
         ' frmChat
         ' 
-        AutoScaleDimensions = New SizeF(7.0F, 15.0F)
+        AutoScaleDimensions = New SizeF(7F, 15F)
         AutoScaleMode = AutoScaleMode.Font
         BackColor = Color.FromArgb(CByte(32), CByte(34), CByte(37))
         ClientSize = New Size(800, 450)
