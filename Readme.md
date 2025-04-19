@@ -1,16 +1,17 @@
 # User Login
-![image](https://github.com/user-attachments/assets/26550fa1-3930-4333-9ced-98cf0876827b)
+![image](https://github.com/user-attachments/assets/80de4056-8ff8-489a-b0b8-5b0e0f9958fd)
 
 # Admin Login
-![image](https://github.com/user-attachments/assets/3129f958-e11e-4d86-981f-914578684920)
+![image](https://github.com/user-attachments/assets/edb7b062-a78b-4767-b96b-62964ea9adf6)
 
 # Register Account
-![image](https://github.com/user-attachments/assets/dab078c7-c349-478a-af87-beacf940aac6)
+![image](https://github.com/user-attachments/assets/d6504064-a3d0-43b6-b811-2c3c0ecb0da8)
 
 # Admin Panel
-![image](https://github.com/user-attachments/assets/8ab8c2b7-4674-4ec6-920d-269a48da1547)
+![image](https://github.com/user-attachments/assets/a9ead447-f0a8-46dc-80ea-a9705cecdf76)
 
 # Chat
-![image](https://github.com/user-attachments/assets/00b2be6a-dc85-4934-84bc-b44c37dc95a6)
+![image](https://github.com/user-attachments/assets/10ef8986-e347-4425-8c8f-e99d5b08ff5d)
+
 
 
