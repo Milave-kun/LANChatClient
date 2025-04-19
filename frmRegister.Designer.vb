@@ -49,7 +49,7 @@ Partial Class frmRegister
         ' 
         lblTitle.AutoSize = True
         lblTitle.Font = New Font("Segoe UI", 27.75F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        lblTitle.Location = New Point(234, 22)
+        lblTitle.Location = New Point(251, 9)
         lblTitle.Name = "lblTitle"
         lblTitle.Size = New Size(317, 50)
         lblTitle.TabIndex = 0
@@ -59,9 +59,9 @@ Partial Class frmRegister
         ' 
         txtUsername.BackColor = Color.FromArgb(CByte(32), CByte(34), CByte(37))
         txtUsername.BorderStyle = BorderStyle.None
-        txtUsername.Font = New Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        txtUsername.Font = New Font("Segoe UI", 12.0F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         txtUsername.ForeColor = Color.White
-        txtUsername.Location = New Point(83, 116)
+        txtUsername.Location = New Point(83, 187)
         txtUsername.Name = "txtUsername"
         txtUsername.Size = New Size(267, 22)
         txtUsername.TabIndex = 1
@@ -70,9 +70,9 @@ Partial Class frmRegister
         ' 
         txtPassword.BackColor = Color.FromArgb(CByte(32), CByte(34), CByte(37))
         txtPassword.BorderStyle = BorderStyle.None
-        txtPassword.Font = New Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        txtPassword.Font = New Font("Segoe UI", 12.0F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         txtPassword.ForeColor = Color.White
-        txtPassword.Location = New Point(83, 187)
+        txtPassword.Location = New Point(440, 326)
         txtPassword.Name = "txtPassword"
         txtPassword.Size = New Size(267, 22)
         txtPassword.TabIndex = 2
@@ -82,9 +82,9 @@ Partial Class frmRegister
         ' 
         txtFirstName.BackColor = Color.FromArgb(CByte(32), CByte(34), CByte(37))
         txtFirstName.BorderStyle = BorderStyle.None
-        txtFirstName.Font = New Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        txtFirstName.Font = New Font("Segoe UI", 12.0F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         txtFirstName.ForeColor = Color.White
-        txtFirstName.Location = New Point(83, 325)
+        txtFirstName.Location = New Point(83, 116)
         txtFirstName.Name = "txtFirstName"
         txtFirstName.Size = New Size(267, 22)
         txtFirstName.TabIndex = 3
@@ -93,7 +93,7 @@ Partial Class frmRegister
         ' 
         btnRegister.FlatAppearance.BorderSize = 0
         btnRegister.FlatStyle = FlatStyle.Flat
-        btnRegister.Location = New Point(521, 394)
+        btnRegister.Location = New Point(331, 376)
         btnRegister.Name = "btnRegister"
         btnRegister.Size = New Size(124, 44)
         btnRegister.TabIndex = 4
@@ -115,7 +115,7 @@ Partial Class frmRegister
         ' 
         Label1.AutoSize = True
         Label1.Font = New Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        Label1.Location = New Point(83, 88)
+        Label1.Location = New Point(83, 159)
         Label1.Name = "Label1"
         Label1.Size = New Size(97, 25)
         Label1.TabIndex = 7
@@ -125,7 +125,7 @@ Partial Class frmRegister
         ' 
         Label2.AutoSize = True
         Label2.Font = New Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        Label2.Location = New Point(83, 159)
+        Label2.Location = New Point(440, 298)
         Label2.Name = "Label2"
         Label2.Size = New Size(91, 25)
         Label2.TabIndex = 8
@@ -135,7 +135,7 @@ Partial Class frmRegister
         ' 
         Label3.AutoSize = True
         Label3.Font = New Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        Label3.Location = New Point(83, 297)
+        Label3.Location = New Point(83, 88)
         Label3.Name = "Label3"
         Label3.Size = New Size(102, 25)
         Label3.TabIndex = 9
@@ -146,11 +146,11 @@ Partial Class frmRegister
         cmbRole.BackColor = Color.FromArgb(CByte(32), CByte(34), CByte(37))
         cmbRole.DropDownStyle = ComboBoxStyle.DropDownList
         cmbRole.FlatStyle = FlatStyle.Flat
-        cmbRole.Font = New Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        cmbRole.Font = New Font("Segoe UI", 12.0F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         cmbRole.ForeColor = Color.White
         cmbRole.FormattingEnabled = True
         cmbRole.Items.AddRange(New Object() {"User", "Admin"})
-        cmbRole.Location = New Point(83, 257)
+        cmbRole.Location = New Point(440, 187)
         cmbRole.Name = "cmbRole"
         cmbRole.Size = New Size(267, 29)
         cmbRole.TabIndex = 10
@@ -159,7 +159,7 @@ Partial Class frmRegister
         ' 
         Label4.AutoSize = True
         Label4.Font = New Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        Label4.Location = New Point(83, 229)
+        Label4.Location = New Point(440, 159)
         Label4.Name = "Label4"
         Label4.Size = New Size(48, 25)
         Label4.TabIndex = 11
@@ -179,7 +179,7 @@ Partial Class frmRegister
         ' 
         txtLastName.BackColor = Color.FromArgb(CByte(32), CByte(34), CByte(37))
         txtLastName.BorderStyle = BorderStyle.None
-        txtLastName.Font = New Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        txtLastName.Font = New Font("Segoe UI", 12.0F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         txtLastName.ForeColor = Color.White
         txtLastName.Location = New Point(440, 116)
         txtLastName.Name = "txtLastName"
@@ -190,7 +190,7 @@ Partial Class frmRegister
         ' 
         Label.AutoSize = True
         Label.Font = New Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        Label.Location = New Point(440, 159)
+        Label.Location = New Point(83, 229)
         Label.Name = "Label"
         Label.Size = New Size(82, 25)
         Label.TabIndex = 15
@@ -200,9 +200,9 @@ Partial Class frmRegister
         ' 
         txtBirthday.BackColor = Color.FromArgb(CByte(32), CByte(34), CByte(37))
         txtBirthday.BorderStyle = BorderStyle.None
-        txtBirthday.Font = New Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        txtBirthday.Font = New Font("Segoe UI", 12.0F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         txtBirthday.ForeColor = Color.White
-        txtBirthday.Location = New Point(440, 187)
+        txtBirthday.Location = New Point(83, 257)
         txtBirthday.Name = "txtBirthday"
         txtBirthday.Size = New Size(267, 22)
         txtBirthday.TabIndex = 14
@@ -221,7 +221,7 @@ Partial Class frmRegister
         ' 
         txtAddress.BackColor = Color.FromArgb(CByte(32), CByte(34), CByte(37))
         txtAddress.BorderStyle = BorderStyle.None
-        txtAddress.Font = New Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        txtAddress.Font = New Font("Segoe UI", 12.0F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         txtAddress.ForeColor = Color.White
         txtAddress.Location = New Point(440, 257)
         txtAddress.Name = "txtAddress"
@@ -232,7 +232,7 @@ Partial Class frmRegister
         ' 
         Label8.AutoSize = True
         Label8.Font = New Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        Label8.Location = New Point(440, 297)
+        Label8.Location = New Point(83, 298)
         Label8.Name = "Label8"
         Label8.Size = New Size(140, 25)
         Label8.TabIndex = 19
@@ -242,9 +242,9 @@ Partial Class frmRegister
         ' 
         txtPhoneNumber.BackColor = Color.FromArgb(CByte(32), CByte(34), CByte(37))
         txtPhoneNumber.BorderStyle = BorderStyle.None
-        txtPhoneNumber.Font = New Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        txtPhoneNumber.Font = New Font("Segoe UI", 12.0F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         txtPhoneNumber.ForeColor = Color.White
-        txtPhoneNumber.Location = New Point(440, 325)
+        txtPhoneNumber.Location = New Point(83, 326)
         txtPhoneNumber.Name = "txtPhoneNumber"
         txtPhoneNumber.Size = New Size(267, 22)
         txtPhoneNumber.TabIndex = 18
@@ -279,7 +279,7 @@ Partial Class frmRegister
         ' 
         ' frmRegister
         ' 
-        AutoScaleDimensions = New SizeF(7F, 15F)
+        AutoScaleDimensions = New SizeF(7.0F, 15.0F)
         AutoScaleMode = AutoScaleMode.Font
         BackColor = Color.FromArgb(CByte(32), CByte(34), CByte(37))
         ClientSize = New Size(800, 450)

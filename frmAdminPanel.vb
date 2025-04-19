@@ -16,7 +16,7 @@ Public Class frmAdminPanel
         RoundButton(btnRefresh, 35, Color.White, 2)
         RoundButton(btnBlock, 35, Color.White, 2)
         RoundButton(btnUnblock, 35, Color.White, 2)
-        RoundButton(btnLogout, 35, Color.White, 2)
+        RoundButton(btnLogout, 25, Color.Red, 2)
     End Sub
 
     Private Sub frmAdminPanel_FormClosing(sender As Object, e As FormClosingEventArgs) Handles MyBase.FormClosing

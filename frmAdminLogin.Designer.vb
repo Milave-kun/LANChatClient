@@ -41,7 +41,7 @@ Partial Class frmAdminLogin
         btnToUserLogin.Name = "btnToUserLogin"
         btnToUserLogin.Size = New Size(119, 33)
         btnToUserLogin.TabIndex = 12
-        btnToUserLogin.Text = "Back to User Login"
+        btnToUserLogin.Text = "User Login"
         btnToUserLogin.UseVisualStyleBackColor = True
         ' 
         ' btnLogin

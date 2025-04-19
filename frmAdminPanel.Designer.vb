@@ -136,7 +136,7 @@ Partial Class frmAdminPanel
         ' 
         btnBlock.FlatAppearance.BorderSize = 0
         btnBlock.FlatStyle = FlatStyle.Flat
-        btnBlock.Location = New Point(485, 263)
+        btnBlock.Location = New Point(550, 263)
         btnBlock.Name = "btnBlock"
         btnBlock.Size = New Size(93, 38)
         btnBlock.TabIndex = 8
@@ -147,7 +147,7 @@ Partial Class frmAdminPanel
         ' 
         btnUnblock.FlatAppearance.BorderSize = 0
         btnUnblock.FlatStyle = FlatStyle.Flat
-        btnUnblock.Location = New Point(584, 263)
+        btnUnblock.Location = New Point(649, 263)
         btnUnblock.Name = "btnUnblock"
         btnUnblock.Size = New Size(93, 38)
         btnUnblock.TabIndex = 9
@@ -171,9 +171,9 @@ Partial Class frmAdminPanel
         Label4.Font = New Font("Segoe UI", 11.25F)
         Label4.Location = New Point(212, 271)
         Label4.Name = "Label4"
-        Label4.Size = New Size(115, 20)
+        Label4.Size = New Size(84, 20)
         Label4.TabIndex = 13
-        Label4.Text = "Phone Number :"
+        Label4.Text = "Phone No. :"
         ' 
         ' lblPhoneNumber
         ' 
@@ -262,7 +262,7 @@ Partial Class frmAdminPanel
         ' 
         ' picAvatar
         ' 
-        picAvatar.Location = New Point(485, 57)
+        picAvatar.Location = New Point(550, 57)
         picAvatar.Name = "picAvatar"
         picAvatar.Size = New Size(192, 192)
         picAvatar.SizeMode = PictureBoxSizeMode.StretchImage
@@ -277,9 +277,10 @@ Partial Class frmAdminPanel
         ' 
         btnLogout.FlatAppearance.BorderSize = 0
         btnLogout.FlatStyle = FlatStyle.Flat
-        btnLogout.Location = New Point(695, 59)
+        btnLogout.ForeColor = Color.Red
+        btnLogout.Location = New Point(636, 14)
         btnLogout.Name = "btnLogout"
-        btnLogout.Size = New Size(93, 38)
+        btnLogout.Size = New Size(60, 25)
         btnLogout.TabIndex = 23
         btnLogout.Text = "Logout"
         btnLogout.UseVisualStyleBackColor = True
